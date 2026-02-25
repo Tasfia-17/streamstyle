@@ -32,6 +32,12 @@ Normal Webcam → Type "cyberpunk neon" → AI-styled stream
 
 ## Features
 
+<div align="center">
+
+<img src="assets/features.svg" alt="Features Overview" width="800"/>
+
+</div>
+
 ### Core Features
 - Live Video Processing - 640x480 @ 5 FPS
 - AI Transformation - Stable Diffusion Turbo (1-step inference)
@@ -124,6 +130,12 @@ npm run dev
 
 ### System Flow
 
+<div align="center">
+
+<img src="assets/dataflow.svg" alt="Data Flow Diagram" width="700"/>
+
+</div>
+
 ```
 Webcam (640x480) → Frame Queue (200ms) → WebSocket → Backend
                                                         ↓
@@ -138,6 +150,12 @@ Ant Media Broadcast → Viewers
 ---
 
 ## Performance
+
+<div align="center">
+
+<img src="assets/performance.svg" alt="Performance Comparison" width="600"/>
+
+</div>
 
 | Metric | GPU (CUDA) | CPU |
 |--------|------------|-----|
@@ -317,18 +335,3 @@ curl localhost:8000/health  # Check backend
 - [Issues](https://github.com/Tasfia-17/streamstyle/issues)
 - [Discussions](https://github.com/Tasfia-17/streamstyle/discussions)
 
----
-
-<div align="center">
-
-**Built for hackathons. Optimized for demos. Ready to win.**
-
-**Demo time: 3-4 minutes | Setup time: 5 minutes**
-
----
-
-Made by [Tasfia](https://github.com/Tasfia-17)
-
-Star this repo if you find it helpful
-
-</div>

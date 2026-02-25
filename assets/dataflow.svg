@@ -1,0 +1,104 @@
+<svg width="700" height="300" viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="flowGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="flowGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    <marker id="flowArrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto">
+      <polygon points="0 0, 10 5, 0 10" fill="#10b981" />
+    </marker>
+  </defs>
+  
+  <!-- Step 1: Webcam -->
+  <g transform="translate(50, 150)">
+    <rect x="-40" y="-40" width="80" height="80" rx="10" fill="url(#flowGrad1)" opacity="0.2" stroke="url(#flowGrad1)" stroke-width="2"/>
+    <rect x="-25" y="-20" width="50" height="35" rx="8" fill="url(#flowGrad1)" opacity="0.8"/>
+    <circle cx="0" cy="-2" r="12" fill="#fff" opacity="0.8"/>
+    <text x="0" y="65" text-anchor="middle" font-size="13" font-weight="bold" fill="#667eea">Webcam</text>
+    <text x="0" y="82" text-anchor="middle" font-size="10" fill="#9ca3af">640x480</text>
+  </g>
+  
+  <!-- Arrow 1 -->
+  <path d="M 90 150 L 160 150" stroke="#10b981" stroke-width="3" marker-end="url(#flowArrow)">
+    <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-dashoffset" values="0;-100" dur="2s" repeatCount="indefinite"/>
+  </path>
+  <text x="125" y="140" text-anchor="middle" font-size="10" fill="#10b981">200ms</text>
+  
+  <!-- Step 2: Queue -->
+  <g transform="translate(200, 150)">
+    <rect x="-40" y="-40" width="80" height="80" rx="10" fill="url(#flowGrad1)" opacity="0.2" stroke="url(#flowGrad1)" stroke-width="2"/>
+    <rect x="-20" y="-15" width="12" height="25" rx="3" fill="#f59e0b" opacity="0.6"/>
+    <rect x="-5" y="-15" width="12" height="25" rx="3" fill="#f59e0b" opacity="0.8"/>
+    <rect x="10" y="-15" width="12" height="25" rx="3" fill="#f59e0b"/>
+    <text x="0" y="65" text-anchor="middle" font-size="13" font-weight="bold" fill="#667eea">Queue</text>
+    <text x="0" y="82" text-anchor="middle" font-size="10" fill="#9ca3af">Buffer</text>
+  </g>
+  
+  <!-- Arrow 2 -->
+  <path d="M 240 150 L 310 150" stroke="#10b981" stroke-width="3" marker-end="url(#flowArrow)">
+    <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-dashoffset" values="0;-100" dur="2s" begin="0.3s" repeatCount="indefinite"/>
+  </path>
+  <text x="275" y="140" text-anchor="middle" font-size="10" fill="#10b981">WebSocket</text>
+  
+  <!-- Step 3: Backend -->
+  <g transform="translate(350, 150)">
+    <rect x="-40" y="-40" width="80" height="80" rx="10" fill="#764ba2" opacity="0.2" stroke="#764ba2" stroke-width="2"/>
+    <circle cx="0" cy="0" r="20" fill="#764ba2" opacity="0.3"/>
+    <path d="M -10 0 L 0 -10 L 10 0 L 0 10 Z" fill="#764ba2"/>
+    <text x="0" y="65" text-anchor="middle" font-size="13" font-weight="bold" fill="#764ba2">Backend</text>
+    <text x="0" y="82" text-anchor="middle" font-size="10" fill="#9ca3af">FastAPI</text>
+  </g>
+  
+  <!-- Arrow 3 -->
+  <path d="M 390 150 L 460 150" stroke="#10b981" stroke-width="3" marker-end="url(#flowArrow)">
+    <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-dashoffset" values="0;-100" dur="2s" begin="0.6s" repeatCount="indefinite"/>
+  </path>
+  <text x="425" y="140" text-anchor="middle" font-size="10" fill="#10b981">Process</text>
+  
+  <!-- Step 4: AI Model -->
+  <g transform="translate(500, 150)">
+    <rect x="-40" y="-40" width="80" height="80" rx="10" fill="#ef4444" opacity="0.2" stroke="#ef4444" stroke-width="2"/>
+    <circle cx="-12" cy="-8" r="6" fill="#ef4444"/>
+    <circle cx="12" cy="-8" r="6" fill="#ef4444"/>
+    <circle cx="0" cy="10" r="6" fill="#ef4444"/>
+    <line x1="-12" y1="-8" x2="0" y2="10" stroke="#ef4444" stroke-width="2"/>
+    <line x1="12" y1="-8" x2="0" y2="10" stroke="#ef4444" stroke-width="2"/>
+    <text x="0" y="65" text-anchor="middle" font-size="13" font-weight="bold" fill="#ef4444">AI Model</text>
+    <text x="0" y="82" text-anchor="middle" font-size="10" fill="#9ca3af">SD Turbo</text>
+  </g>
+  
+  <!-- Arrow 4 -->
+  <path d="M 540 150 L 610 150" stroke="#10b981" stroke-width="3" marker-end="url(#flowArrow)">
+    <animate attributeName="stroke-dasharray" values="0,100;100,0" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-dashoffset" values="0;-100" dur="2s" begin="0.9s" repeatCount="indefinite"/>
+  </path>
+  <text x="575" y="140" text-anchor="middle" font-size="10" fill="#10b981">Styled</text>
+  
+  <!-- Step 5: Display -->
+  <g transform="translate(650, 150)">
+    <rect x="-40" y="-40" width="80" height="80" rx="10" fill="url(#flowGrad2)" opacity="0.2" stroke="url(#flowGrad2)" stroke-width="2"/>
+    <rect x="-20" y="-15" width="40" height="30" rx="4" fill="url(#flowGrad2)" opacity="0.8"/>
+    <rect x="-15" y="-10" width="10" height="10" fill="#fbbf24" opacity="0.6"/>
+    <rect x="-2" y="-10" width="10" height="10" fill="#ef4444" opacity="0.6"/>
+    <rect x="-15" y="3" width="10" height="7" fill="#10b981" opacity="0.6"/>
+    <text x="0" y="65" text-anchor="middle" font-size="13" font-weight="bold" fill="#10b981">Display</text>
+    <text x="0" y="82" text-anchor="middle" font-size="10" fill="#9ca3af">Canvas</text>
+  </g>
+  
+  <!-- Timeline -->
+  <g transform="translate(50, 250)">
+    <line x1="0" y1="0" x2="600" y2="0" stroke="#4b5563" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="0" y="20" font-size="11" fill="#9ca3af">0ms</text>
+    <text x="150" y="20" font-size="11" fill="#9ca3af">200ms</text>
+    <text x="300" y="20" font-size="11" fill="#9ca3af">~400ms</text>
+    <text x="450" y="20" font-size="11" fill="#9ca3af">~800ms (GPU)</text>
+    <text x="600" y="20" font-size="11" fill="#9ca3af">~1000ms</text>
+  </g>
+</svg>
