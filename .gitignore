@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Node modules
+node_modules/
+dist/
+.cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Model cache
+.cache/
+huggingface/
+
+# Environment
+.env
+.env.local
+
+# Build
+build/
+*.egg-info/
+
+# Temporary
+*.tmp
+.temp/
+
+# Old files
+*_old.py
