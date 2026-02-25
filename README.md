@@ -25,7 +25,7 @@
 Normal Webcam → Type "cyberpunk neon" → AI-styled stream
 ```
 
-**Inspired by**: [GenDJ](https://github.com/GenDJ) - Open source real-time AI warping  
+
 **Our innovation**: Voice control + 8 presets + production-ready architecture
 
 ---
